@@ -4,6 +4,8 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import contactRoutes from './routes/contact';
 
+require('dns').setServers(['8.8.8.8', '8.8.4.4']);
+
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
